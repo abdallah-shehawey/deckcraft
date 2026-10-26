@@ -37,6 +37,11 @@ struct App(
 );
 
 impl eframe::App for App {
+    // App preferences already persist separately; only the native window belongs in eframe storage.
+    fn persist_egui_memory(&self) -> bool {
+        false
+    }
+
     fn logic(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         #[cfg(target_os = "macos")]
         apple_events::poll(&self.1, &mut self.0, ctx);
