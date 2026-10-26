@@ -233,6 +233,9 @@ fn main() -> eframe::Result {
             .with_fullsize_content_view(true)
             .with_titlebar_shown(false)
             .with_title_shown(false),
+        // No-preferences and control-channel runs neither restore nor save the native window, so
+        // control-channel screenshots start from the same window every time.
+        persist_window: std::env::var_os("DECKCRAFT_NO_PREFS").is_none() && control_port.is_none(),
         ..Default::default()
     };
     options.viewport = options.viewport.with_app_id(APP_ID);
