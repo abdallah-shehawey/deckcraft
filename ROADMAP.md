@@ -1,7 +1,5 @@
 # DeckCraft roadmap
 
-> **Dependency integration (2026-10-27):** Reconciled the latest upstream module changes and shared `craft-libs` revision `92d392c` while retaining the window-restoration `egui` revision `69750b7` pending storytold/egui#3. Feature readiness estimates are unchanged.
-
 **Stage: alpha** · next: beta, ~20 points and ~120–210 h away
 
 > **Last reviewed:** 2026-10-14 · **Last updated:** 2026-10-27 · **Change:** trivial (progress log: windows reopen at their last size or maximized at any interface size, storytold/egui#3; previous: trivial, progress log: Edit Points handle drags with Shift, Ctrl/Cmd or Alt/Option set the point type; previous: trivial, progress log: scroll bars on the zoomed slide pane, #1157; previous: minor, native chart payloads stored in bounded ZIP members; previous: major, community PR wave 2026-10-14: ~60 landed items in the progress log, among them the Font, Paragraph, Photo Album, theme colour and font and Date and Time dialogs, presenter and show controls, the SmartArt Text Pane and PPTX corpus slices; breadth 84% after `cargo xtask parity`, ready stays ~55%, stage stays alpha; duplicated rows and headers folded; previous: minor, hours to ~95% per audience added) · **Target:** Microsoft PowerPoint for Mac 16.113 (Microsoft 365)
@@ -139,6 +137,7 @@ app's JSON control channel (`deckcraft --control PORT`).
 
 | Date | What landed |
 |---|---|
+| 2026-10-27 | Reconcile the current upstream modules and craft-libs `92d392c` while retaining the window-restoration egui pin `69750b7`; feature readiness estimates are unchanged. |
 | 2026-10-26 | Windows reopen at their last size, or maximized, at any interface size (such as 150%), and Restore after a maximized restart returns to the last normal size. On GNOME Wayland, where the compositor draws no frame, a native Wayland window (`DECKCRAFT_WAYLAND=1`; by default DeckCraft opens through XWayland, where GNOME draws the frame) gets standard minimize, maximize and close buttons. Shared change: storytold/egui#3; checked on Linux only. |
 | 2026-10-25 | Windows installer: the Start menu shortcut takes the icon embedded in `deckcraft.exe` instead of an MSI `<Icon>`, so a taskbar pin keeps its icon after an update (#1114); a pin that already lost it has to be unpinned and pinned again once |
 | 2026-10-24 | AutoFormat as you type: a paragraph that starts with `*`, `-`, `--`, `>`, `<>`, `1.`, `1)`, `I.`, `i.`, `A.`, `a.` or `a)` and a space or tab becomes a bulleted or numbered list in that style; Backspace right after puts the typed text back, and Tools ▸ AutoCorrect and `text.autocorrect {lists}` turn it off |
@@ -297,6 +296,7 @@ app's JSON control channel (`deckcraft --control PORT`).
 
 | Date | Change | Summary |
 |---|---|---|
+| 2026-10-27 | trivial | Reconcile the current upstream modules and craft-libs `92d392c` while retaining the window-restoration egui pin `69750b7`; feature readiness estimates are unchanged. |
 | 2026-10-26 | trivial | Progress log: windows reopen at their last size or maximized at any interface size; standard caption buttons on native GNOME Wayland windows, `DECKCRAFT_WAYLAND=1` (storytold/egui#3) |
 | 2026-10-25 | trivial | Progress log: Windows shortcut icon survives updates (#1114). Scores and milestone names unchanged |
 | 2026-10-24 | trivial | Progress log: selecting a range of table cells by dragging. Scores and milestone names unchanged |
